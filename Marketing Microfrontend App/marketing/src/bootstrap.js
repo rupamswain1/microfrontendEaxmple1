@@ -7,12 +7,16 @@ const mount=(element)=>{
        <App/>,
         element
     )
-}
+};
+
 //If we are in development or in isolation, call mount immediately
-if(process.env.NODE_ENV==='development'){
-    const devRoot=document.querySelector('#marketing-dev-root');
-    mount(devRoot);
-}
+// if(process.env.NODE_ENV==='development'){
+//     console.log(process.env.NODE_ENV);
+//     const devRoot=document.querySelector('#marketing-dev-root');
+//     if(devRoot){ //this check is also necessary, else on container it will not work
+//     mount(devRoot);
+//     }
+// }
 
 //We are running through container and we should export the mont function
 export {mount}
