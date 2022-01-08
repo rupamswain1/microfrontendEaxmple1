@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - master
-   
+    paths:
+      - 'Markering Microfrontend App/container/**'
 defaults:
   run:
     working-directory: Markering Microfrontend App/container
