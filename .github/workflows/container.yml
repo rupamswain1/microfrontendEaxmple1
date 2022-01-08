@@ -3,9 +3,9 @@ name: deploy-container-test
 on:
   push:
     branches:
-      -master
+      - master
     paths:
-      -'Markering Microfrontend App/container/**'
+      - 'Markering Microfrontend App/container/**'
 defaults:
   run:
     working-directory: Markering Microfrontend App/container
