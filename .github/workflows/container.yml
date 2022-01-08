@@ -5,10 +5,10 @@ on:
     branches:
       -master
     paths:
-      -'Markering Microfrontend App/container'
+      -'Markering Microfrontend App/container/**'
 defaults:
   run:
-    working-directory: packages/container
+    working-directory: Markering Microfrontend App/container
 
 jobs:
   build:
