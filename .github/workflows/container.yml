@@ -7,7 +7,7 @@ on:
    
 defaults:
   run:
-    working-directory: Markering Microfrontend App/container
+    working-directory: Marketing_Microfrontend_App/container
 
 jobs:
   build:
