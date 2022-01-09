@@ -30,7 +30,7 @@ jobs:
       - uses: chetan/invalidate-cloudfront-action@master
         env: 
           DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION_ID }}
-          PATHS: '/marketng/latest/index.html'
+          PATHS: '/marketng/latest/remoteEntry.js'
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
           AWS_EC2_METADATA_DISABLED: true
