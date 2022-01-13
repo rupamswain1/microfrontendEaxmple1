@@ -6,6 +6,7 @@ export default ()=>{
     const history=useHistory();
     useEffect(()=>{
         const {onParentNavigate}=mount(marketRef.current,{
+            initialPath:history.location.pathname,
             onNavigate:({pathname})=>{
                 if(history.location.pathname!==pathname){
                     history.push(pathname);

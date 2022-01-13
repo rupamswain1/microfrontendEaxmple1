@@ -4,6 +4,9 @@ const ModuleFederationPlugin=require('webpack/lib/container/ModuleFederationPlug
 const packageJSON=require('../package.json')
 const devConfig={
     mode:'development',
+    output:{
+        publicPath:'http://localhost:8080/'
+    },
     devServer:{
         port:8080,
         historyApiFallback:{
@@ -14,7 +17,8 @@ const devConfig={
         new ModuleFederationPlugin({
             name:'container',
             remotes:{
-                marketing:'marketing@http://localhost:8081/remote.js'
+                marketing:'marketing@http://localhost:8081/remote.js',
+                auth:'auth@http://localhost:8082/remote.js'
             },
             shared:packageJSON.dependencies,
         }),
