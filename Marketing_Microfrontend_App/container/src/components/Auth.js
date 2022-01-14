@@ -2,7 +2,7 @@ import {mount} from 'auth/AuthApp';
 import React,{ useEffect,useRef } from 'react';
 import {useHistory} from 'react-router-dom';
 
-export default ()=>{
+export default ({onSignIn})=>{
     const authRef=useRef(null);
     const history=useHistory();
    
@@ -13,7 +13,8 @@ export default ()=>{
                 if(history.location.pathname!==pathname){
                     history.push(pathname)
                 }
-            }
+            },
+            onSignIn
             
         },
         
